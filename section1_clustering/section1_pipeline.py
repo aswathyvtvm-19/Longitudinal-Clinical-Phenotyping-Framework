@@ -923,4 +923,7 @@ def generate_comorbidity_tree(output_dir):
 summary_df = find_multilevel_similarity_groups("Results/Section_1_Clustering/BAV/hierarchical")
 comorbidity_tree = generate_comorbidity_tree("Results/Section_1_Clustering/BAV/hierarchical")"
 
-
+if __name__ == "__main__":
+    years = range(2000, 2020)
+    data_path = "../PKL_CAT_Jan_2025/Cat2_BAV_1_5"
+    process_all_years_clustering(data_path, years, is_bav=True, clustering_method="hierarchical")
